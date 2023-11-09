@@ -62,6 +62,7 @@ impl Write for RecogBuffer {
             return Ok(0);
         }
         self.count += 1;
+        log::debug!("WRITE: {} frames", self.count);
         if self.count < 1100 {
             Ok(buf.len())
         } else {

@@ -162,8 +162,6 @@ unsafe extern "C" fn engine_create_channel(
         "[DEMO_RECOG] Engine {:?} is going to create a channel",
         engine
     );
-    // let custom_engine = (*engine).obj as *mut DemoRecogEngine;
-    // let demo_engine = (*(*custom_engine).safe_engine).demo_engine();
 
     let demo_channel =
         uni::apr_palloc(pool, size_of::<DemoRecogChannel>()) as *mut DemoRecogChannel;

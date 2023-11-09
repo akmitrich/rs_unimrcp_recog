@@ -50,4 +50,4 @@ COPY conf/unimrcpserver.xml /usr/local/unimrcp/conf/unimrcpserver.xml
 
 ENV RUST_LOG="rs_unimrcp_recog=trace"
 WORKDIR /usr/local/unimrcp/bin
-CMD [ "./unimrcpserver", "-r", "/usr/local/unimrcp", "-o", "1", "-l", "7" ]
+ENTRYPOINT [ "./unimrcpserver", "-w", "-o", "2", "-l", "7", "-r", "/usr/local/unimrcp" ]
